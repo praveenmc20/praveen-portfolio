@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen M C | Full Stack & Software Developer</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1d4ed8',
+                        accent: '#2563eb',
+                        dark: '#0f172a'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white text-slate-800 antialiased flex flex-col min-h-screen selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Header / Navbar -->
+    <header class="w-full border-b border-slate-100 bg-white sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-slate-900">
+                Praveen M C<span class="text-blue-600">.</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <button onclick="goToSection(1)" class="nav-link hover:text-blue-600 transition" data-target="1">About</button>
+                <button onclick="goToSection(2)" class="nav-link hover:text-blue-600 transition" data-target="2">Skills</button>
+                <button onclick="goToSection(3)" class="nav-link hover:text-blue-600 transition" data-target="3">Projects</button>
+                <button onclick="goToSection(4)" class="nav-link hover:text-blue-600 transition" data-target="4">Education</button>
+            </nav>
+
+            <div>
+                <button onclick="goToSection(5)" class="border border-slate-200 hover:border-blue-600 hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium transition flex items-center gap-2">
+                    Contact <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow flex items-center">
+        <div class="max-w-6xl mx-auto px-6 py-12 w-full">
+
+            <!-- SECTION 1: ABOUT -->
+            <section id="section-1" class="portfolio-section">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold tracking-wide">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            OPEN TO INTERNSHIP AND JOB OPPORTUNITIES
+                        </div>
+                        
+                        <div>
+                            <p class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-1">Hello, I'm</p>
+                            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+                                Praveen M C<span class="text-blue-600">.</span>
+                            </h1>
+                        </div>
+
+                        <h2 class="text-2xl font-semibold text-blue-600">Full Stack & Software Developer</h2>
+                        
+                        <p class="text-slate-600 text-base md:text-lg leading-relaxed">
+                            I am a final-year Computer Science Engineering student passionate about building scalable web applications, enterprise systems, and intelligent machine learning models. I enjoy turning complex operational challenges into smooth, intuitive software solutions.
+                        </p>
+
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <button onclick="goToSection(3)" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-medium text-sm transition shadow-sm flex items-center gap-2">
+                                Explore Projects <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                            <button onclick="goToSection(5)" class="border border-slate-200 hover:bg-slate-50 text-slate-700 px-6 py-3 rounded-xl font-medium text-sm transition">
+                                Get in Touch
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Profile Visual / Larger Photo Card -->
+                    <div class="lg:col-span-5 flex flex-col items-center justify-center bg-slate-50 border border-slate-100 rounded-3xl p-8 text-center shadow-sm">
+                        <!-- Increased photo size to w-48 h-48 -->
+                        <img src="profile.jpg" alt="Praveen M C" class="w-48 h-48 rounded-full object-cover mb-4 shadow-inner border-2 border-white">
+                        
+                        <h3 class="text-lg font-bold text-slate-900">Praveen M C</h3>
+                        <p class="text-sm text-slate-500 mt-1">Computer Science & Engineering</p>
+                        <p class="text-xs text-slate-400 mt-0.5">Mandya, Karnataka, India</p>
+
+                        <div class="flex gap-4 mt-6 pt-6 border-t border-slate-200 w-full justify-center text-sm">
+                            <a href="https://github.com/praveenmc20" target="_blank" class="text-slate-600 hover:text-blue-600 transition flex items-center gap-1 font-medium">
+                                <i class="fa-brands fa-github"></i> GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/praveen-m-c-609855380" target="_blank" class="text-slate-600 hover:text-blue-600 transition flex items-center gap-1 font-medium">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: SKILLS -->
+            <section id="section-2" class="portfolio-section hidden">
+                <div class="space-y-2 mb-8">
+                    <span class="text-xs font-bold tracking-widest text-blue-600 uppercase">02 / WHAT I WORK WITH</span>
+                    <h2 class="text-3xl font-bold text-slate-900">Technical Skills</h2>
+                    <p class="text-slate-500 text-sm">Core technologies, languages, and tools I leverage in my development workflow.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <span class="text-xs font-semibold text-blue-600 block mb-2">01</span>
+                        <h3 class="font-bold text-slate-900 text-lg mb-4">Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">C</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">Java</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">Python</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <span class="text-xs font-semibold text-blue-600 block mb-2">02</span>
+                        <h3 class="font-bold text-slate-900 text-lg mb-4">Frontend</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">HTML5</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">CSS3</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <span class="text-xs font-semibold text-blue-600 block mb-2">03</span>
+                        <h3 class="font-bold text-slate-900 text-lg mb-4">Backend</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">Flask</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <span class="text-xs font-semibold text-blue-600 block mb-2">04</span>
+                        <h3 class="font-bold text-slate-900 text-lg mb-4">Database</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">SQL</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">MySQL</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">SQLite</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <span class="text-xs font-semibold text-blue-600 block mb-2">05</span>
+                        <h3 class="font-bold text-slate-900 text-lg mb-4">Tools & Version Control</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">Git</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">GitHub</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <span class="text-xs font-semibold text-blue-600 block mb-2">06</span>
+                        <h3 class="font-bold text-slate-900 text-lg mb-4">Libraries & Concepts</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">OpenCV</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">Scikit-learn</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs px-3 py-1.5 rounded-lg font-medium">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: PROJECTS -->
+            <section id="section-3" class="portfolio-section hidden">
+                <div class="space-y-2 mb-8">
+                    <span class="text-xs font-bold tracking-widest text-blue-600 uppercase">03 / SELECTED WORK</span>
+                    <h2 class="text-3xl font-bold text-slate-900">Projects I've Built</h2>
+                    <p class="text-slate-500 text-sm">Enterprise platforms, AI systems, and automated tracking applications.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Project 1 -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold uppercase tracking-wider text-blue-600">ERP & Logistics</span>
+                                <span class="text-xs text-slate-400 font-mono">01</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Brothers Centering & Transport Operations Manager</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                Full-stack enterprise resource planning web application designed to digitize equipment rentals, logistics operations, multi-user ledger accounts, and automated corporate invoice generation with WhatsApp integration.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">Full Stack</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">SQL</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">HTML/JS</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">ERP</span>
+                            </div>
+                            <a href="https://github.com/praveenmc20" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm font-semibold flex items-center gap-1.5">
+                                View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Computer Vision / AI</span>
+                                <span class="text-xs text-slate-400 font-mono">02</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Smart Attendance System using Face Recognition</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                Automated attendance management system using facial recognition to eliminate manual roll-calls. Implements real-time face detection matching live camera feeds against pre-registered student profile databases.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">Python</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">OpenCV</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">face_recognition</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">SQLite/MySQL</span>
+                            </div>
+                            <a href="https://github.com/praveenmc20" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm font-semibold flex items-center gap-1.5">
+                                View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between md:col-span-2">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Machine Learning / Web App</span>
+                                <span class="text-xs text-slate-400 font-mono">03</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Loan Approval Prediction System</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                Decision Tree-based machine learning model built to predict loan approval status using applicant parameters like age, income, credit score, and financial history, coupled with an interactive Flask web interface.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">Python</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">Scikit-learn</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">Flask</span>
+                                <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-medium">Machine Learning</span>
+                            </div>
+                            <a href="https://github.com/praveenmc20" target="_blank" class="text-blue-600 hover:text-blue-700 text-sm font-semibold flex items-center gap-1.5">
+                                View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4: EDUCATION -->
+            <section id="section-4" class="portfolio-section hidden">
+                <div class="space-y-2 mb-8">
+                    <span class="text-xs font-bold tracking-widest text-blue-600 uppercase">04 / MY BACKGROUND</span>
+                    <h2 class="text-3xl font-bold text-slate-900">Education & Certifications</h2>
+                    <p class="text-slate-500 text-sm">Academic credentials and professional certifications.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Degree Card -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider block mb-1">Education</span>
+                        <h3 class="text-xl font-bold text-slate-900">Bachelor of Engineering in Computer Science</h3>
+                        <p class="text-slate-600 font-medium mt-1">Mysuru Royal Institute of Technology</p>
+                        <div class="flex flex-wrap justify-between items-center mt-4 pt-4 border-t border-slate-100 text-sm">
+                            <span class="text-slate-500 font-mono">2023 – 2027</span>
+                            <span class="bg-blue-50 text-blue-700 font-semibold px-3 py-1 rounded-lg">CGPA: 7.68</span>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4">Certifications & Workshops</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                                <span class="text-xs text-blue-600 font-mono font-bold block mb-1">01</span>
+                                <h4 class="font-semibold text-slate-800 text-sm">Python Basics</h4>
+                                <p class="text-xs text-slate-500 mt-1">Foundational Programming</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                                <span class="text-xs text-blue-600 font-mono font-bold block mb-1">02</span>
+                                <h4 class="font-semibold text-slate-800 text-sm">SQL Basics</h4>
+                                <p class="text-xs text-slate-500 mt-1">HackerRank Certified</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                                <span class="text-xs text-blue-600 font-mono font-bold block mb-1">03</span>
+                                <h4 class="font-semibold text-slate-800 text-sm">Machine Learning Workshop</h4>
+                                <p class="text-xs text-slate-500 mt-1">A Cube Pvt. Ltd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: CONTACT -->
+            <section id="section-5" class="portfolio-section hidden">
+                <div class="space-y-2 mb-8">
+                    <span class="text-xs font-bold tracking-widest text-blue-600 uppercase">05 / LET'S CONNECT</span>
+                    <h2 class="text-3xl font-bold text-slate-900">Have an opportunity or project?</h2>
+                    <p class="text-slate-500 text-sm">I'm actively looking for entry-level software engineering roles and internships. Feel free to reach out!</p>
+                </div>
+
+                <div class="space-y-6">
+                    <a href="mailto:praveenmc20@gmail.com" class="text-xl md:text-2xl font-bold text-blue-600 hover:text-blue-700 transition inline-flex items-center gap-2">
+                        praveenmc20@gmail.com <i class="fa-solid fa-arrow-up-right-from-square text-base"></i>
+                    </a>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                        <a href="mailto:praveenmc20@gmail.com" class="bg-white border border-slate-200 p-5 rounded-2xl hover:border-blue-600 transition group shadow-sm">
+                            <span class="text-xs text-slate-400 block mb-1">Email</span>
+                            <span class="font-semibold text-slate-800 group-hover:text-blue-600 flex items-center justify-between">
+                                Send a message <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </span>
+                        </a>
+                        <a href="https://linkedin.com/in/praveen-m-c-609855380" target="_blank" class="bg-white border border-slate-200 p-5 rounded-2xl hover:border-blue-600 transition group shadow-sm">
+                            <span class="text-xs text-slate-400 block mb-1">LinkedIn</span>
+                            <span class="font-semibold text-slate-800 group-hover:text-blue-600 flex items-center justify-between">
+                                Connect with me <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </span>
+                        </a>
+                        <a href="https://github.com/praveenmc20" target="_blank" class="bg-white border border-slate-200 p-5 rounded-2xl hover:border-blue-600 transition group shadow-sm">
+                            <span class="text-xs text-slate-400 block mb-1">GitHub</span>
+                            <span class="font-semibold text-slate-800 group-hover:text-blue-600 flex items-center justify-between">
+                                View my work <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer with Pagination controls -->
+    <footer class="w-full border-t border-slate-100 bg-white py-6">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-slate-500">
+                © 2026 Praveen M C. Designed with care.
+            </p>
+
+            <!-- Pagination Buttons -->
+            <div class="flex items-center gap-3">
+                <button id="prev-btn" onclick="navigate(-1)" class="px-4 py-2 text-xs font-semibold rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition disabled:opacity-40 disabled:cursor-not-allowed">
+                    ← Previous
+                </button>
+                <span id="page-indicator" class="text-xs font-mono font-medium text-slate-600">01 / 05</span>
+                <button id="next-btn" onclick="navigate(1)" class="px-4 py-2 text-xs font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition disabled:opacity-40 disabled:cursor-not-allowed">
+                    Next →
+                </button>
+            </div>
+
+            <p class="text-xs text-slate-400">
+                Built with HTML, CSS & JavaScript.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive Navigation Script -->
+    <script>
+        let currentSection = 1;
+        const totalSections = 5;
+
+        function updateView() {
+            // Hide all sections
+            for (let i = 1; i <= totalSections; i++) {
+                const sec = document.getElementById(`section-${i}`);
+                if (sec) sec.classList.add('hidden');
+            }
+
+            // Show current section
+            const activeSec = document.getElementById(`section-${currentSection}`);
+            if (activeSec) activeSec.classList.remove('hidden');
+
+            // Update page indicator
+            document.getElementById('page-indicator').textContent = `0${currentSection} / 0${totalSections}`;
+
+            // Update button states
+            document.getElementById('prev-btn').disabled = currentSection === 1;
+            document.getElementById('next-btn').disabled = currentSection === totalSections;
+
+            // Scroll to top of main area smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function goToSection(sectionNum) {
+            if (sectionNum >= 1 && sectionNum <= totalSections) {
+                currentSection = sectionNum;
+                updateView();
+            }
+        }
+
+        function navigate(direction) {
+            const newSection = currentSection + direction;
+            if (newSection >= 1 && newSection <= totalSections) {
+                currentSection = newSection;
+                updateView();
+            }
+        }
+
+        // Initialize view on load
+        updateView();
+    </script>
+</body>
+</html>
